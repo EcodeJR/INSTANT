@@ -5,7 +5,7 @@ const Home = () => {
                 <hr className="w-[70%] h-1 border-0 bg-secondary" />
                 <div className="flex flex-col items-center justify-center py-10">
                     <h1 className="text-4xl md:text-8xl font-bold">INSTANT</h1>
-                    <h2 className="text-xl md:text-2xl">Photo Studio</h2>
+                    <h2 className="text-xl md:text-3xl md:font-bold">Photo Studio</h2>
                 </div>
                 <hr className="w-[70%] h-1 border-0 bg-secondary" />
                 <div className="px-3 flex flex-col items-center justify-center md:w-[50%]">

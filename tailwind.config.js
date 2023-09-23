@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         'primary': '#1a1a1a',
-        'secondary': '#979013',
+        'secondary': '#ddc676',
       },
       backgroundImage: {
         'homebg': "url('./assets/homebg.jpg')",
