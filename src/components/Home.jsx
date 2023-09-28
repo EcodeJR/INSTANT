@@ -14,9 +14,9 @@ const Home = () => {
                 </p>
                 </div>
             </div>
-            <div className="w-full h-screen flex flex-col items-center justify-center bg-primary text-white">
+            <div className="w-full min-h-[50vh] md:min-h-[70vh] lg:h-screen flex flex-col items-center justify-center bg-primary text-white">
                 <hr className="w-[30%] h-1 border-0 bg-secondary" />
-                <h1 className="text-4xl md:text-8xl font-bold my-10">WELCOME</h1>
+                <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold my-10">WELCOME</h1>
                 <div className="px-3 flex flex-col items-center justify-center md:w-[50%]">
                     <p className="text-sm md:text-xl text-center">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita minima omnis tenetur ea repellat minus. Iste voluptas esse magni voluptates odio. Nihil dolores aperiam vitae obcaecati ipsa. Quod, quia dolorum!
