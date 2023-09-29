@@ -7,6 +7,9 @@ import office3 from '../assets/office3.jpg';
 import office4 from '../assets/office4.jpg';
 import office5 from '../assets/office5.jpg';
 import office6 from '../assets/office6.jpg';
+import questions from '../assets/questions.jpg';
+import FAQ from './FAQ';
+import Partners from './Partners';
 
 const Home = () => {
     return ( 
@@ -169,20 +172,20 @@ const Home = () => {
             <div className='bg-primary w-screen h-fit'>
                 <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>PACKAGES</h1>
                 <div className='flex flex-col md:flex-row items-center justify-around'>
-                    <div className='w-[300px] p-10 border-[2px] border-gray-500 text-white text-center'>
+                    <div className='w-[300px] p-10 border-[2px] border-gray-500 hover:border-secondary text-white text-center'>
                         <h1 className='font-semibold text-base md:text-xl lg:text-xl'>Video Covering</h1>
                         <h2 className='text-gray-300'>Per Hour</h2>
-                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl'>$50</h2>
+                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl hover:text-secondary'>$50</h2>
                     </div>
-                    <div className='w-[300px] p-10 border-[2px] border-gray-500 text-white text-center my-5 md:my-0'>
+                    <div className='w-[300px] p-10 border-[2px] border-gray-500 hover:border-secondary text-white text-center my-5 md:my-0'>
                         <h1 className='font-semibold text-base md:text-xl lg:text-xl'>Studio Shoot</h1>
                         <h2 className='text-gray-300'>Per Picture</h2>
-                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl'>$10</h2>
+                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl hover:text-secondary'>$10</h2>
                     </div>
-                    <div className='w-[300px] p-10 border-[2px] border-gray-500 text-white text-center'>
+                    <div className='w-[300px] p-10 border-[2px] border-gray-500 hover:border-secondary text-white text-center'>
                         <h1 className='font-semibold text-base md:text-xl lg:text-xl'>Home Shoot</h1>
                         <h2 className='text-gray-300'>Per Picture</h2>
-                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl'>$20</h2>
+                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl hover:text-secondary'>$20</h2>
                     </div>
                 </div>
             </div>
@@ -262,6 +265,22 @@ const Home = () => {
 
 
                 </div>
+            </div>
+
+            <div className='bg-primary w-screen h-fit flex flex-col md:flex-row items-center justify-center md:justify-around p-10'>
+                <div className='px-5 w-full md:w-[50%] lg:w-[50%]'>
+                    <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>FREQUENTLY ASKED QUESTIONS</h1>
+                    <div className='flex flex-col items-center justify-around h-[60vh]'>
+                        <FAQ />
+                    </div>
+                </div>
+                <img src={questions} alt="man standing with camera" className='w-[70%] md:w-[30vw] my-10 md:my-0 h-[70vh] md:h-[70%]' />
+            </div>
+
+
+            <div className='bg-primary w-screen h-fit relative overflow-hidden flex flex-col justify-center'>
+            <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>OUR PARTNERS</h1>
+                <Partners />
             </div>
 
 

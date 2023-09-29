@@ -6,6 +6,19 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        marquee: "marquee 50s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(calc(-100% - 2.5rem))',
+          },
+        }
+      },
       colors: {
         'primary': '#1a1a1a',
         'secondary': '#ddc676',
@@ -21,7 +34,8 @@ export default {
         'team2': "url('./assets/team2.jpg')",
         'team3': "url('./assets/team3.jpg')",
         'team4': "url('./assets/team4.jpg')",
-      }
+        'questions': "url('./assets/questions.jpg')",
+      },
     },
   },
   plugins: [],
