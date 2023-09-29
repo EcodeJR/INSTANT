@@ -17,6 +17,10 @@ export default {
         'october': "url('./assets/october.jpg')",
         'wedding': "url('./assets/wedding.jpg')",
         'aboutus': "url('./assets/aboutus.jpg')",
+        'team1': "url('./assets/team1.jpg')",
+        'team2': "url('./assets/team2.jpg')",
+        'team3': "url('./assets/team3.jpg')",
+        'team4': "url('./assets/team4.jpg')",
       }
     },
   },

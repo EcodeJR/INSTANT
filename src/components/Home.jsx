@@ -187,6 +187,82 @@ const Home = () => {
                 </div>
             </div>
 
+            <div className='bg-primary w-screen h-fit'>
+                <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>OUR TEAM</h1>
+                <div className='w-full flex flex-col md:flex-row items-start justify-between px-5'>
+                    <p className='text-gray-300 md:w-[30%]'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate nulla neque eveniet! Praesentium dignissimos quibusdam repellendus expedita voluptate! Culpa ratione voluptatem minus perspiciatis sint, unde quae neque facere similique vero.</p>
+                    <div className='grid grid-rows-4 md:grid-rows-2 grid-flow-col gap-2 place-items-center mx-auto my-3 md:mx-0 md:my-0'>
+                        <div className='relative w-[300px] h-[300px] bg-team1 bg-center bg-no-repeat bg-cover'>
+                            <div className='absolute bottom-0 left-0 w-full px-3 py-1 bg-white text-primary'>
+                                <h2 className='font-bold text-xl'>JOHN DAMON</h2>
+                                <p className='font-semibold'>CEO</p>
+                            </div>
+                        </div>
+                        <div className='relative w-[300px] h-[300px] bg-team2 bg-center bg-no-repeat bg-cover'>
+                            <div className='absolute bottom-0 left-0 w-full px-3 py-1 bg-white text-primary'>
+                                <h2 className='font-bold text-xl'>SARAH DAMON</h2>
+                                <p className='font-semibold'>ASSITANT</p>
+                            </div>
+                        </div>
+                        <div className='relative w-[300px] h-[300px] bg-team3 bg-center bg-no-repeat bg-cover'>
+                            <div className='absolute bottom-0 left-0 w-full px-3 py-1 bg-white text-primary'>
+                                <h2 className='font-bold text-xl'>MIKE TUCKER</h2>
+                                <p className='font-semibold'>LEAD PHOTOGRAPHER</p>
+                            </div>
+                        </div>
+                        <div className='relative w-[300px] h-[300px] bg-team4 bg-center bg-no-repeat bg-cover'>
+                            <div className='absolute bottom-0 left-0 w-full px-3 py-1 bg-white text-primary'>
+                                <h2 className='font-bold text-xl'>KRISTINE LEON</h2>
+                                <p className='font-semibold'>CO-LEAD PHOTOGRAPHER</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='bg-primary w-screen h-fit'>
+                <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>TESTIMONIALS</h1>
+                <div className="scrollbar-hide flex w-full snap-x snap-mandatory scroll-px-10 gap-10 overflow-x-scroll scroll-smooth px-10">
+                        <div className="md:1/2 h-[250px] relative aspect-[1/2] w-[90%] shrink-0 snap-start snap-always sm:w-[44%] md:w-[30%] bg-white shadow-md shadow-gray-500 mb-3 p-10">
+                            <h1 className='font-bold text-xl'>Best Service</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque quas nostrum distinctio doloremque itaque veritatis tenetur sequi, a amet.</p>
+                            <h2 className='absolute bottom-5 left-10 font-semibold'>John Micheal</h2>
+                        </div>
+
+                        <div className="md:1/2 h-[250px] relative aspect-[1/2] w-[90%] shrink-0 snap-start snap-always sm:w-[44%] md:w-[30%] bg-white shadow-md shadow-gray-500 mb-3 p-10">
+                            <h1 className='font-bold text-xl'>Best Service</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque quas nostrum distinctio doloremque itaque veritatis tenetur sequi, a amet.</p>
+                            <h2 className='absolute bottom-5 left-10 font-semibold'>John Micheal</h2>
+                        </div>
+
+                        <div className="md:1/2 h-[250px] relative aspect-[1/2] w-[90%] shrink-0 snap-start snap-always sm:w-[44%] md:w-[30%] bg-white shadow-md shadow-gray-500 mb-3 p-10">
+                            <h1 className='font-bold text-xl'>Best Service</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque quas nostrum distinctio doloremque itaque veritatis tenetur sequi, a amet.</p>
+                            <h2 className='absolute bottom-5 left-10 font-semibold'>John Micheal</h2>
+                        </div>
+
+                        <div className="md:1/2 h-[250px] relative aspect-[1/2] w-[90%] shrink-0 snap-start snap-always sm:w-[44%] md:w-[30%] bg-white shadow-md shadow-gray-500 mb-3 p-10">
+                            <h1 className='font-bold text-xl'>Best Service</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque quas nostrum distinctio doloremque itaque veritatis tenetur sequi, a amet.</p>
+                            <h2 className='absolute bottom-5 left-10 font-semibold'>John Micheal</h2>
+                        </div>
+
+                        <div className="md:1/2 h-[250px] relative aspect-[1/2] w-[90%] shrink-0 snap-start snap-always sm:w-[44%] md:w-[30%] bg-white shadow-md shadow-gray-500 mb-3 p-10">
+                            <h1 className='font-bold text-xl'>Best Service</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque quas nostrum distinctio doloremque itaque veritatis tenetur sequi, a amet.</p>
+                            <h2 className='absolute bottom-5 left-10 font-semibold'>John Micheal</h2>
+                        </div>
+
+                        <div className="md:1/2 h-[250px] relative aspect-[1/2] w-[90%] shrink-0 snap-start snap-always sm:w-[44%] md:w-[30%] bg-white shadow-md shadow-gray-500 mb-3 p-10">
+                            <h1 className='font-bold text-xl'>Best Service</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque quas nostrum distinctio doloremque itaque veritatis tenetur sequi, a amet.</p>
+                            <h2 className='absolute bottom-5 left-10 font-semibold'>John Micheal</h2>
+                        </div>
+                        
+
+
+                </div>
+            </div>
 
 
 
