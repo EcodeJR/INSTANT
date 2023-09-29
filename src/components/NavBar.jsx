@@ -23,7 +23,7 @@ const NavBar = () => {
 
     return ( 
         <>
-            <nav className='relative w-full h-fit md:px-20 px-5 py-3 bg-primary flex items-center justify-between text-white'>
+            <nav className='absolute top-0 left-0 w-full h-fit md:px-20 px-5 py-3 bg-primary flex items-center justify-between text-white'>
 
                 <div>
                     <h1 className='font-bold text-xl text-secondary'>INSTANT</h1>

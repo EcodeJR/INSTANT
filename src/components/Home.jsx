@@ -1,3 +1,13 @@
+import camera from '../assets/camera.png';
+import hello from '../assets/hello.png';
+import mic from '../assets/mic.png';
+import office1 from '../assets/office1.jpg';
+import office2 from '../assets/office2.jpg';
+import office3 from '../assets/office3.jpg';
+import office4 from '../assets/office4.jpg';
+import office5 from '../assets/office5.jpg';
+import office6 from '../assets/office6.jpg';
+
 const Home = () => {
     return ( 
         <>
@@ -14,7 +24,10 @@ const Home = () => {
                 </p>
                 </div>
             </div>
-            <div className="w-full min-h-[50vh] md:min-h-[70vh] lg:h-screen flex flex-col items-center justify-center bg-primary text-white">
+            <div className="w-full min-h-[50vh] md:min-h-[70vh] lg:h-screen flex flex-col items-center justify-center bg-primary text-white relative">
+                <img src={camera} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[100px] h-auto absolute top-1 right-5 opacity-50' />
+                <img src={hello} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[100px] h-auto absolute top-1 left-3 opacity-50' />
+                <img src={mic} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[100px] h-auto absolute bottom-1 right-3 opacity-50' />
                 <hr className="w-[30%] h-1 border-0 bg-secondary" />
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold my-10">WELCOME</h1>
                 <div className="px-3 flex flex-col items-center justify-center md:w-[50%]">
@@ -52,6 +65,134 @@ const Home = () => {
                         <hr className="w-[20%] h-1 border-0 bg-secondary" />
                     </div>                
             </div>
+
+            <div className='p-10 flex items-center justify-around flex-col md:flex-row w-screen min-h-fit bg-primary text-white'>
+                <div className='w-[80%] h-[70vh] md:w-[30%] bg-aboutus bg-center bg-no-repeat bg-cover my-5 md:my-0 md:mx-5'>
+                    <h1 className='font-bold text-xl md:text-2xl lg:text-3xl'>ABOUT <br />
+                     US</h1>
+                </div>
+                <div className='w-fit md:w-[60%]'>
+                    <h1 className='font-bold text-2xl md:text-3xl lg:text-4xl text-secondary my-5'>INSTANT PHOTOGRAPHY</h1>
+                    <p className='text-gray-300'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptatibus, error blanditiis ipsam quidem officia illum nemo perspiciatis quod explicabo aliquid itaque commodi at asperiores voluptatum enim ex laboriosam consequatur!</p>
+                    <p className='text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, placeat labore. Consequuntur magnam vel aliquid quos quia pariatur delectus repellendus, doloremque quisquam? Eaque aliquid corporis accusantium magni repellat, omnis placeat.</p>
+                    <div className='flex items-center justify-around my-7'>
+                        <div><h1 className='font-bold text-3xl md:text-4xl'>100<span>+</span></h1><p className='text-sm text-gray-300'>CUSTOMERS</p></div>
+                        <hr className='rotate-90 w-[70px] bg-white' />
+                        <div><h1 className='font-bold text-3xl md:text-4xl'>500<span>+</span></h1><p className='text-sm text-gray-300'>PHOTOS</p></div>
+                        <hr className='rotate-90 w-[70px] bg-white' />
+                        <div><h1 className='font-bold text-3xl md:text-4xl'>10<span>+</span></h1><p className='text-sm text-gray-300'>YEARS</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='bg-primary w-screen h-fit'>
+                <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-5'>OUR OFFICE SPACE</h1>
+                    <div className="scrollbar-hide flex w-full snap-x snap-mandatory scroll-px-10 gap-10 overflow-x-scroll scroll-smooth px-10">
+                        <div className="md:2/3 relative aspect-[2/3] w-[90%] shrink-0 snap-start snap-always rounded-xl bg-orange-100 sm:w-[44%] md:w-[30%]">
+                            <div className="absolute bottom-0 z-10 w-full rounded-xl bg-gradient-to-t from-black px-5 py-3">
+                            <h2 className="mt-4 text-xl font-bold text-white">Indonesia</h2>
+                            <p className="text-sm text-white/50">Studio</p>
+                            </div>
+                            <img src={office1} alt="image" className="h-full w-full rounded-xl object-cover" />
+                        </div>
+
+                        <div className="md:2/3 relative aspect-[2/3] w-[90%] shrink-0 snap-start snap-always rounded-xl bg-orange-100 sm:w-[44%] md:w-[30%]">
+                            <div className="absolute bottom-0 z-10 w-full rounded-xl bg-gradient-to-t from-black px-5 py-3">
+                            <h2 className="mt-4 text-xl font-bold text-white">New York</h2>
+                            <p className="text-sm text-white/50">Studio</p>
+                            </div>
+                            <img src={office2} className="h-full w-full rounded-xl object-cover" />
+                        </div>
+
+                        <div className="md:2/3 relative aspect-[2/3] w-[90%] shrink-0 snap-start snap-always rounded-xl bg-blue-100 sm:w-[44%] md:w-[30%]">
+                            <div className="absolute bottom-0 z-10 w-full rounded-xl bg-gradient-to-t from-black px-5 py-3">
+                            <h2 className="mt-4 text-xl font-bold text-white">London</h2>
+                            <p className="text-sm text-white/50">Studio</p>
+                            </div>
+                            <img src={office3} className="h-full w-full rounded-xl object-cover" />
+                        </div>
+
+                        <div className="md:2/3 relative aspect-[2/3] w-[90%] shrink-0 snap-start snap-always rounded-xl bg-green-100 sm:w-[44%] md:w-[30%]">
+                            <div className="absolute bottom-0 z-10 w-full rounded-xl bg-gradient-to-t from-black px-5 py-3">
+                            <h2 className="mt-4 text-xl font-bold text-white">USA</h2>
+                            <p className="text-sm text-white/50">Studio</p>
+                            </div>
+                            <img src={office4} className="h-full w-full rounded-xl object-cover" />
+                        </div>
+
+                        <div className="md:2/3 relative aspect-[2/3] w-[90%] shrink-0 snap-start snap-always rounded-xl bg-rose-100 sm:w-[44%] md:w-[30%]">
+                            <div className="absolute bottom-0 z-10 w-full rounded-xl bg-gradient-to-t from-black px-5 py-3">
+                            <h2 className="mt-4 text-xl font-bold text-white">Singapore</h2>
+                            <p className="text-sm text-white/50">Studio</p>
+                            </div>
+                            <img src={office5} className="h-full w-full rounded-xl object-cover" />
+                        </div>
+
+                        <div className="md:2/3 relative aspect-[2/3] w-[90%] shrink-0 snap-start snap-always rounded-xl bg-yellow-100 sm:w-[44%] md:w-[30%]">
+                            <div className="absolute bottom-0 z-10 w-full rounded-xl bg-gradient-to-t from-black px-5 py-3">
+                            <h2 className="mt-4 text-xl font-bold text-white">Bangkok</h2>
+                            <p className="text-sm text-white/50">Studio</p>
+                            </div>
+                            <img src={office6} className="h-full w-full rounded-xl object-cover" />
+                        </div>
+                </div>
+            </div>
+
+            <div className='bg-primary w-screen h-fit'>
+                <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>SERVICES</h1>
+                <div className='px-10 text-white'>
+                    <hr className='h-[2px] bg-gray-300' />
+                    <div className='flex flex-col md:flex-row items-start md:items-center justify-around py-5'>
+                        <h2 className='font-bold text-xl'>01</h2>
+                        <h1 className='font-bold text-xl my-5 md:my-0'>Video Covering</h1>
+                        <p className='md:w-[30%] text-gray-300'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nisi modi nihil, porro nostrum voluptates minima sit esse? Voluptas nam quam explicabo.</p>
+                    </div>
+                </div>
+                <div className='px-10 text-white'>
+                    <hr className='h-[2px] bg-gray-300' />
+                    <div className='flex flex-col md:flex-row items-start md:items-center justify-around py-5'>
+                        <h2 className='font-bold text-xl'>02</h2>
+                        <h1 className='font-bold text-xl my-5 md:my-0'>Photography</h1>
+                        <p className='md:w-[30%] text-gray-300'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nisi modi nihil, porro nostrum voluptates minima sit esse? Voluptas nam quam explicabo.</p>
+                    </div>
+                </div>
+                <div className='px-10 text-white'>
+                    <hr className='h-[2px] bg-gray-300' />
+                    <div className='flex flex-col md:flex-row items-start md:items-center justify-around py-5'>
+                        <h2 className='font-bold text-xl'>03</h2>
+                        <h1 className='font-bold text-xl my-5 md:my-0'>Home Shots</h1>
+                        <p className='md:w-[30%] text-gray-300'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nisi modi nihil, porro nostrum voluptates minima sit esse? Voluptas nam quam explicabo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='bg-primary w-screen h-fit'>
+                <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>PACKAGES</h1>
+                <div className='flex flex-col md:flex-row items-center justify-around'>
+                    <div className='w-[300px] p-10 border-[2px] border-gray-500 text-white text-center'>
+                        <h1 className='font-semibold text-base md:text-xl lg:text-xl'>Video Covering</h1>
+                        <h2 className='text-gray-300'>Per Hour</h2>
+                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl'>$50</h2>
+                    </div>
+                    <div className='w-[300px] p-10 border-[2px] border-gray-500 text-white text-center my-5 md:my-0'>
+                        <h1 className='font-semibold text-base md:text-xl lg:text-xl'>Studio Shoot</h1>
+                        <h2 className='text-gray-300'>Per Picture</h2>
+                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl'>$10</h2>
+                    </div>
+                    <div className='w-[300px] p-10 border-[2px] border-gray-500 text-white text-center'>
+                        <h1 className='font-semibold text-base md:text-xl lg:text-xl'>Home Shoot</h1>
+                        <h2 className='text-gray-300'>Per Picture</h2>
+                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl'>$20</h2>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
             
             <div className="w-full min-h-screen py-10 px-2 overflow-hidden flex flex-col items-center justify-center text-white bg-primary">
                 <div className="flex flex-col items-center justify-center py-10">

@@ -16,6 +16,7 @@ export default {
         'boats': "url('./assets/boats.jpg')",
         'october': "url('./assets/october.jpg')",
         'wedding': "url('./assets/wedding.jpg')",
+        'aboutus': "url('./assets/aboutus.jpg')",
       }
     },
   },
