@@ -1,5 +1,5 @@
 import camera from '../assets/camera.png';
-import hello from '../assets/hello.png';
+import hello from '../assets/security-camera.png';
 import mic from '../assets/mic.png';
 import questions from '../assets/questions.jpg';
 import About from './About';
@@ -26,9 +26,9 @@ const Home = () => {
                 </div>
             </div>
             <div className="w-full min-h-[50vh] md:min-h-[70vh] lg:h-screen flex flex-col items-center justify-center bg-primary text-white relative">
-                <img src={camera} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[100px] h-auto absolute top-1 right-5 opacity-50' />
-                <img src={hello} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[100px] h-auto absolute top-1 left-3 opacity-50' />
-                <img src={mic} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[100px] h-auto absolute bottom-1 right-3 opacity-50' />
+                <img src={camera} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute top-1 right-5 opacity-50' />
+                <img src={hello} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute top-1 left-3 opacity-50' />
+                <img src={mic} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute bottom-1 right-3 opacity-50' />
                 <hr className="w-[30%] h-1 border-0 bg-secondary" />
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold my-10">WELCOME</h1>
                 <div className="px-3 flex flex-col items-center justify-center md:w-[50%]">
