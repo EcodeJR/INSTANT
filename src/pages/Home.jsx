@@ -2,11 +2,11 @@ import camera from '../assets/camera.png';
 import hello from '../assets/security-camera.png';
 import mic from '../assets/mic.png';
 import questions from '../assets/questions.jpg';
-import About from './About';
-import FAQ from './FAQ';
-import OfficeSpace from './OfficeSpace';
-import Partners from './Partners';
-import Footer from './footer';
+import About from '../components/About';
+import FAQ from '../components/FAQ';
+import OfficeSpace from '../components/OfficeSpace';
+import Partners from '../components/Partners';
+import Footer from '../components/footer';
 
 
 const Home = () => {

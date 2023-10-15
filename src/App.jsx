@@ -1,4 +1,10 @@
-import Home from './components/Home';
+import Home from './pages/Home';
+{/*
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import ServicesPage from './pages/ServicesPages';
+import BookingPage from './pages/BookingPage';
+*/}
 import NavBar from './components/NavBar'
 import Loading from './components/Loading'
 import { useState, useEffect } from 'react'
@@ -15,10 +21,11 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-        setLoading(false)
-    }, 18000);
-}, []);
+    const asyncOperation = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(asyncOperation);
+  }, []);
 
   return (
     <>
