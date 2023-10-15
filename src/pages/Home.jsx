@@ -7,6 +7,7 @@ import FAQ from '../components/FAQ';
 import OfficeSpace from '../components/OfficeSpace';
 import Partners from '../components/Partners';
 import Footer from '../components/footer';
+import OurTeam from '../components/OurTeam';
 
 
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="w-full min-h-[50vh] md:min-h-[70vh] lg:h-screen flex flex-col items-center justify-center bg-primary text-white relative">
-                <img src={camera} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute top-1 right-5 opacity-50' />
+                <img src={camera} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute top-1 right-5 opacity-50 animate-shake' />
                 <img src={hello} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute top-1 left-3 opacity-50' />
                 <img src={mic} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute bottom-1 right-3 opacity-50' />
                 <hr className="w-[30%] h-1 border-0 bg-secondary" />
@@ -67,7 +68,7 @@ const Home = () => {
                     </div>                
             </div>
 
-            <div className='p-10 flex items-center justify-around flex-col md:flex-row w-screen min-h-fit bg-primary text-white'>
+            <div className='p-10'>
                 <About />
             </div>
 
@@ -125,36 +126,7 @@ const Home = () => {
             </div>
 
             <div className='bg-primary w-screen h-fit'>
-                <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>OUR TEAM</h1>
-                <div className='w-full flex flex-col md:flex-row items-start justify-between px-10'>
-                    <p className='text-gray-300 md:w-[30%]'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate nulla neque eveniet! Praesentium dignissimos quibusdam repellendus expedita voluptate! Culpa ratione voluptatem minus perspiciatis sint, unde quae neque facere similique vero.</p>
-                    <div className='grid grid-rows-4 md:grid-rows-2 grid-flow-col gap-2 place-items-center mx-auto my-3 md:mx-0 md:my-0'>
-                        <div className='relative w-[300px] h-[300px] bg-team1 bg-center bg-no-repeat bg-cover'>
-                            <div className='absolute bottom-0 left-0 w-full px-3 py-1 bg-white text-primary'>
-                                <h2 className='font-bold text-xl'>JOHN DAMON</h2>
-                                <p className='font-semibold'>CEO</p>
-                            </div>
-                        </div>
-                        <div className='relative w-[300px] h-[300px] bg-team2 bg-center bg-no-repeat bg-cover'>
-                            <div className='absolute bottom-0 left-0 w-full px-3 py-1 bg-white text-primary'>
-                                <h2 className='font-bold text-xl'>SARAH DAMON</h2>
-                                <p className='font-semibold'>ASSITANT</p>
-                            </div>
-                        </div>
-                        <div className='relative w-[300px] h-[300px] bg-team3 bg-center bg-no-repeat bg-cover'>
-                            <div className='absolute bottom-0 left-0 w-full px-3 py-1 bg-white text-primary'>
-                                <h2 className='font-bold text-xl'>MIKE TUCKER</h2>
-                                <p className='font-semibold'>LEAD PHOTOGRAPHER</p>
-                            </div>
-                        </div>
-                        <div className='relative w-[300px] h-[300px] bg-team4 bg-center bg-no-repeat bg-cover'>
-                            <div className='absolute bottom-0 left-0 w-full px-3 py-1 bg-white text-primary'>
-                                <h2 className='font-bold text-xl'>KRISTINE LEON</h2>
-                                <p className='font-semibold'>CO-LEAD PHOTOGRAPHER</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <OurTeam />
             </div>
 
             <div className='bg-primary w-screen h-fit'>

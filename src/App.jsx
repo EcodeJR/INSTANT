@@ -1,14 +1,21 @@
 import Home from './pages/Home';
-{/*
+//pages
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPages';
 import BookingPage from './pages/BookingPage';
-*/}
-import NavBar from './components/NavBar'
-import Loading from './components/Loading'
-import { useState, useEffect } from 'react'
-import { BrowserRouter as Router , Routes, Route } from 'react-router-dom';
+
+
+import { 
+  createBrowserRouter,
+  Route, 
+  createRoutesFromElements,
+  RouterProvider
+  } from 'react-router-dom';
+  //Layout
+import RootLayout from './pages/RootLayout';
+import NotFound from './pages/NotFound';
+import GallaryPage from './pages/GallaryPage';
 {
 
   /** import reactLogo from './assets/react.svg'
@@ -16,44 +23,29 @@ import viteLogo from '/vite.svg'*/
 
 }
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+        <Route path='/' element={<RootLayout />}>
+          <Route index element={<Home />} />
+          <Route path='about' element={<AboutPage />} />
+          <Route path='contact' element={<ContactPage />} />
+          <Route path='services' element={<ServicesPage />} />
+          <Route path='gallary' element={<GallaryPage />} />
+          <Route path='booking' element={<BookingPage />} />
+          <Route path='*' element={<NotFound />} />
+        </Route>
+  )
+)
+
 function App() {
   {/*const [count, setCount] = useState(0)*/}
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const asyncOperation = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    return () => clearTimeout(asyncOperation);
-  }, []);
 
   return (
     <>
-    {loading ? (<Loading />) :
-      (
-      <section className="w-screen h-full scroll-smooth">
-        <NavBar />
-        <Router>
-          <Routes>
-              <Route path="/" element={<Home />} />
-            {/*
-              <Route path="about" element={<About />} />
-            
-              <Route path="contact" element={<Contact />}/>
-          
-              <Route path="services" element={<Services />}/>
-                
-              <Route path="faq"  element={<FAQ />}/>
-
-              <Route path="term&condition"  element={<TermAndCondition />}/>
-                
-              <Route path="*"  element={<NotFound />}/>
-          */}
-          </Routes>
-        </Router>
-      </section>
-      )
-    }
+    
+        <RouterProvider router={router} />
+      
     </>
   )
 }

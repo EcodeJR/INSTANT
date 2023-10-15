@@ -8,6 +8,7 @@ export default {
     extend: {
       animation: {
         marquee: "marquee 50s linear infinite",
+        shake: "shake 2s linear infinite",
       },
       keyframes: {
         marquee: {
@@ -17,6 +18,17 @@ export default {
           to: {
             transform: 'translateX(calc(-100% - 2.5rem))',
           },
+        },
+        shake: {
+          '0%': {
+            transform: 'rotate(10deg)',
+          },
+          '50%': {
+            transform: 'rotate(-10deg)',
+          },
+          '100%': {
+            transform: 'rotate(10deg)',
+          }
         }
       },
       colors: {
@@ -25,6 +37,10 @@ export default {
       },
       backgroundImage: {
         'homebg': "url('./assets/homebg.jpg')",
+        'aboutbg': "url('./assets/about.jpg')",
+        'contactbg': "url('./assets/contact.jpg')",
+        'servicesbg': "url('./assets/services.jpg')",
+        'gallarybg': "url('./assets/gallary.jpg')",
         'camp': "url('./assets/camp.jpg')",
         'boats': "url('./assets/boats.jpg')",
         'october': "url('./assets/october.jpg')",
