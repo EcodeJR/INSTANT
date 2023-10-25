@@ -1,3 +1,7 @@
+import Footer from "../components/footer";
+import Packages from "../components/packages";
+import Services from "../components/services";
+
 const ServicesPage = () => {
     return ( <>
     <div className="w-full h-[70vh] flex flex-col items-center justify-center bg-servicesbg bg-center bg-no-repeat bg-cover">
@@ -7,6 +11,11 @@ const ServicesPage = () => {
                 </div>
                 <hr className="w-[70%] h-1 border-0 bg-secondary" />
     </div>
+    <div className="bg-primary w-full h-fit py-10">
+        <Services />
+        <Packages />
+    </div>
+    <Footer />
     </> );
 }
  

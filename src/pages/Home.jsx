@@ -8,6 +8,8 @@ import OfficeSpace from '../components/OfficeSpace';
 import Partners from '../components/Partners';
 import Footer from '../components/footer';
 import OurTeam from '../components/OurTeam';
+import Services from '../components/services';
+import Packages from '../components/packages';
 
 
 const Home = () => {
@@ -41,7 +43,7 @@ const Home = () => {
                     READ MORE
                 </button>
             </div>
-            <div className="w-screen min-h-screen grid grid-cols-1 md:grid-cols-2 gap-0 text-white text-center">
+            <div className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 gap-0 text-white text-center">
                     
                     <div className="flex flex-col items-center justify-center py-10 bg-camp bg-center bg-no-repeat bg-cover">
                         <hr className="w-[20%] h-1 border-0 bg-secondary" />
@@ -68,68 +70,29 @@ const Home = () => {
                     </div>                
             </div>
 
-            <div className='p-10'>
+            <div className='p-10 bg-primary text-white'>
                 <About />
             </div>
 
-            <div className='bg-primary w-screen h-fit'>
+            <div className='bg-primary w-full h-fit'>
                 <OfficeSpace />
             </div>
 
-            <div className='bg-primary w-screen h-fit'>
+            <div className='bg-primary w-full h-fit'>
                 <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>SERVICES</h1>
-                <div className='px-10 text-white'>
-                    <hr className='h-[2px] bg-gray-300' />
-                    <div className='flex flex-col md:flex-row items-start md:items-center justify-around py-5'>
-                        <h2 className='font-bold text-xl'>01</h2>
-                        <h1 className='font-bold text-xl my-5 md:my-0'>Video Covering</h1>
-                        <p className='md:w-[30%] text-gray-300'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nisi modi nihil, porro nostrum voluptates minima sit esse? Voluptas nam quam explicabo.</p>
-                    </div>
-                </div>
-                <div className='px-10 text-white'>
-                    <hr className='h-[2px] bg-gray-300' />
-                    <div className='flex flex-col md:flex-row items-start md:items-center justify-around py-5'>
-                        <h2 className='font-bold text-xl'>02</h2>
-                        <h1 className='font-bold text-xl my-5 md:my-0'>Photography</h1>
-                        <p className='md:w-[30%] text-gray-300'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nisi modi nihil, porro nostrum voluptates minima sit esse? Voluptas nam quam explicabo.</p>
-                    </div>
-                </div>
-                <div className='px-10 text-white'>
-                    <hr className='h-[2px] bg-gray-300' />
-                    <div className='flex flex-col md:flex-row items-start md:items-center justify-around py-5'>
-                        <h2 className='font-bold text-xl'>03</h2>
-                        <h1 className='font-bold text-xl my-5 md:my-0'>Home Shots</h1>
-                        <p className='md:w-[30%] text-gray-300'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nisi modi nihil, porro nostrum voluptates minima sit esse? Voluptas nam quam explicabo.</p>
-                    </div>
-                </div>
+                <Services />
             </div>
 
-            <div className='bg-primary w-screen h-fit'>
+            <div className='bg-primary w-full h-fit'>
                 <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>PACKAGES</h1>
-                <div className='flex flex-col md:flex-row items-center justify-around'>
-                    <div className='w-[300px] p-10 border-[2px] border-gray-500 hover:border-secondary text-white text-center'>
-                        <h1 className='font-semibold text-base md:text-xl lg:text-xl'>Video Covering</h1>
-                        <h2 className='text-gray-300'>Per Hour</h2>
-                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl hover:text-secondary'>$50</h2>
-                    </div>
-                    <div className='w-[300px] p-10 border-[2px] border-gray-500 hover:border-secondary text-white text-center my-5 md:my-0'>
-                        <h1 className='font-semibold text-base md:text-xl lg:text-xl'>Studio Shoot</h1>
-                        <h2 className='text-gray-300'>Per Picture</h2>
-                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl hover:text-secondary'>$10</h2>
-                    </div>
-                    <div className='w-[300px] p-10 border-[2px] border-gray-500 hover:border-secondary text-white text-center'>
-                        <h1 className='font-semibold text-base md:text-xl lg:text-xl'>Home Shoot</h1>
-                        <h2 className='text-gray-300'>Per Picture</h2>
-                        <h2 className='font-bold text-xl md:text-2xl lg:text-3xl hover:text-secondary'>$20</h2>
-                    </div>
-                </div>
+                <Packages />
             </div>
 
-            <div className='bg-primary w-screen h-fit'>
+            <div className='bg-primary w-full h-fit'>
                 <OurTeam />
             </div>
 
-            <div className='bg-primary w-screen h-fit'>
+            <div className='bg-primary w-full h-fit'>
                 <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>TESTIMONIALS</h1>
                 <div className="scrollbar-hide flex w-full snap-x snap-mandatory scroll-px-10 gap-10 overflow-x-scroll scroll-smooth px-10">
                         <div className="md:1/2 h-[250px] relative aspect-[1/2] w-[90%] shrink-0 snap-start snap-always sm:w-[44%] md:w-[30%] bg-white shadow-md shadow-gray-500 mb-3 p-10">
@@ -173,7 +136,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='bg-primary w-screen h-fit flex flex-col md:flex-row items-center justify-center md:justify-around p-10'>
+            <div className='bg-primary w-full h-fit flex flex-col md:flex-row items-center justify-center md:justify-around p-10'>
                 <div className='px-5 w-full md:w-[50%] lg:w-[50%]'>
                     <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>FREQUENTLY ASKED QUESTIONS</h1>
                     <div className='flex flex-col items-center justify-around h-[60vh]'>
@@ -184,7 +147,7 @@ const Home = () => {
             </div>
 
 
-            <div className='bg-primary w-screen h-fit relative overflow-hidden flex flex-col justify-center'>
+            <div className='bg-primary w-full h-fit relative overflow-hidden flex flex-col justify-center'>
             <h1 className='font-bold text-white text-2xl md:text-3xl lg:text-4xl p-10'>OUR PARTNERS</h1>
                 <Partners />
             </div>
