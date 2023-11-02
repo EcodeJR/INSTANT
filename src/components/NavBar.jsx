@@ -25,7 +25,7 @@ const NavBar = () => {
 
     return ( 
         <>
-            <nav className='relative w-full h-fit md:px-10 px-5 py-3 bg-primary flex items-center justify-between text-white'>
+            <nav className='absolute z-20 w-full h-fit md:px-10 px-5 py-3 bg-bg-blur backdrop-blur-xl flex items-center justify-between text-white'>
 
                 <div>
                     <h1 className='font-bold text-3xl md:text-3xl lg:text-4xl text-secondary'>INSTANT</h1>

@@ -34,8 +34,8 @@ export default {
       colors: {
         'primary': '#1a1a1a',
         'secondary': '#ddc676',
-        'bg-blur': 'rgba(255, 255, 255, 0.2)',
-        'bord-blur': '1px solid rgba(255, 255, 255, 0.3)'
+        'bg-blur': 'rgba(0, 0, 0, 0.1)',
+        'bord-blur': '1px solid rgba(255, 255, 255, 0.3)',
       },
       backgroundImage: {
         'homebg': "url('./assets/homebg.jpg')",
