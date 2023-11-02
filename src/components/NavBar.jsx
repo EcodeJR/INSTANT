@@ -13,7 +13,7 @@ const NavBar = () => {
 
     const SmallScreen =
         <>
-            <div className='absolute top-[100%] left-0 flex flex-col items-center justify-around w-screen min-h-[70vh] bg-primary font-bold'>
+            <div className='absolute z-20 top-[100%] left-0 flex flex-col items-center justify-around w-full min-h-[70vh] border-b-8 border-b-secondary shadow-lg bg-primary font-bold'>
                     <NavLink to='/' className='text-2xl uppercase'>Home</NavLink>
                     <NavLink to="about" className='text-2xl uppercase'>About</NavLink>
                     <NavLink to="services" className='text-2xl uppercase'>Services</NavLink>
