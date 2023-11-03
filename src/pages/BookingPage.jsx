@@ -1,3 +1,5 @@
+import Footer from '../components/footer';
+
 const BookingPage = () => {
     return ( <>
     <div className="w-screen min-h-screen bg-primary flex flex-col lg:flex-row items-center justify-between">
@@ -30,8 +32,8 @@ const BookingPage = () => {
         <div className="w-full lg:w-[40vw] h-[40vh] lg:h-screen md:hidden lg:block bg-homebg bg-cover bg-no-repeat clipped-polygon block mt-2">
 
         </div>
-        
     </div>
+    <Footer />
     </> );
 }
  

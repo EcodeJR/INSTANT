@@ -32,8 +32,8 @@ export default {
         }
       },
       colors: {
-        'primary': '#1a1a1a',
-        'secondary': '#ddc676',
+        'primary': '#0d2137',//#1a1a1a (First color used)
+        'secondary': '#ff8e2b',//#ddc676 (First color used)
         'bg-blur': 'rgba(0, 0, 0, 0.1)',
         'bord-blur': '1px solid rgba(255, 255, 255, 0.3)',
       },
