@@ -2,14 +2,19 @@ import { AiOutlinePhone } from 'react-icons/ai';
 import { HiOutlineMail } from 'react-icons/hi';
 import { AiOutlineHome } from 'react-icons/ai';
 import Footer from '../components/footer';
+import { motion } from 'framer-motion';
 
 const ContactPage = () => {
     return ( <>
     <div className="w-full h-screen flex flex-col items-center justify-center bg-contactbg bg-center bg-no-repeat bg-cover">
     <hr className="w-[70%] h-1 border-0 bg-secondary" />
-                <div className="flex flex-col items-center justify-center py-10">
+                <motion.div
+                initial={{ opacity:0, x: 50 }}
+                animate={{ opacity:1, x:0 }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col items-center justify-center py-10">
                     <h1 className="text-4xl md:text-8xl font-bold text-white">CONTACT US</h1>
-                </div>
+                </motion.div>
                 <hr className="w-[70%] h-1 border-0 bg-secondary" />
     </div>
         <div className="relative text-primary bg-white flex flex-col lg:flex-row items-center justify-center">

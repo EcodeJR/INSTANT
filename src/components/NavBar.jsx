@@ -2,6 +2,9 @@ import { CgMenuRightAlt } from 'react-icons/cg';
 import { IoClose } from 'react-icons/io5';
 import { useState } from 'react';
 import { NavLink } from "react-router-dom";
+import { motion } from 'framer-motion';
+
+
 
 
 const NavBar = () => {
@@ -10,18 +13,50 @@ const NavBar = () => {
 
     const handleClick = () => setClick(!click);
 
+    const variants = {
+        open: { x: 0 },
+        closed: { x: "-100%" }
+    }
+    
+    const [Links, setLinks] = useState([
+        {id: 1, name: 'Home', value: '/', style: 'text-2xl uppercase'},
+        {id: 2, name: 'About', value: 'about', style: 'text-2xl uppercase'},
+        {id: 3, name: 'Services', value: 'services', style: 'text-2xl uppercase'},
+        {id: 4, name: 'Contact', value: 'contact', style: 'text-2xl uppercase'},
+        {id: 5, name: 'Gallery', value: 'gallary', style: 'text-2xl uppercase'},
+        {id: 6, name: 'Book', value: 'booking', style: 'text-2xl uppercase px-3 py-3 relative after:absolute after:top-0 after:right-0 after:border-[1px] after:border-l-0 after:border-white after:h-full after:w-[15px] before:absolute before:top-0 before:left-0 before:border-[1px] before:border-r-0 before:border-white before:h-full before:w-[15px]'},
+      ]);
+
 
     const SmallScreen =
         <>
-            <div className='absolute z-20 top-[100%] left-0 flex flex-col items-center justify-around w-full min-h-[70vh] border-b-8 border-b-secondary shadow-lg bg-primary font-bold'>
-                    <NavLink to='/' className='text-2xl uppercase'>Home</NavLink>
-                    <NavLink to="about" className='text-2xl uppercase'>About</NavLink>
-                    <NavLink to="services" className='text-2xl uppercase'>Services</NavLink>
-                    <NavLink to="contact" className='text-2xl uppercase'>Contact</NavLink>
-                    <NavLink to="gallary" className='text-2xl uppercase'>Gallary</NavLink>
-                    <NavLink to="booking" className='text-2xl uppercase px-3 py-3 border-[1px] border-white'>Book</NavLink>
-            </div>
+            <motion.div
+            initial='closed'
+            animate={click ? "open" : "closed"}
+            variants={variants}
+            transition={{when: 'beforeChildren'}}
+            className='absolute z-20 top-[100%] right-0 flex flex-col items-start justify-around w-[70vw] min-h-[70vh] border-b-8 border-b-secondary shadow-lg bg-primary/90 font-bold py-20 px-5'>
+                {Links.map(link => (
+                    <motion.span
+                    initial={{ opacity:0, x:'-100px'}}
+                    animate={{ opacity:1, x:0 }}
+                    transition={{delay: 0.3}}
+                    key={link.id}>
+                        <NavLink
+                        to={link.value} className={link.style}>{link.name}</NavLink>
+                    </motion.span>
+                    
+                ))}
+            </motion.div>
         </>
+        const filteredLinks = Links.filter(link => link.id !== 6); // Excluding link with ID 6(Book)
+
+        // Render Desktop NavLink components for the filtered links
+        const renderedLinks = filteredLinks.map(link => (
+          <NavLink key={link.id} to={link.value} className='px-3'>
+            {link.name}
+          </NavLink>
+        ));
 
     return ( 
         <>
@@ -30,20 +65,20 @@ const NavBar = () => {
                 <div>
                     <h1 className='font-bold text-3xl md:text-3xl lg:text-4xl text-secondary'>INSTANT</h1>
                 </div>
-                <div className='hidden md:flex md:items-center md:justify-between min-w-[60%] font-bold'>
+                <motion.div
+                initial={{ y:-20}}
+                animate={{ y: 0}}
+                transition={{delay:0.6}}
+                className='hidden md:flex md:items-center md:justify-between min-w-[60%] font-bold'>
                     <div>
-                        <NavLink to='/' className='px-3'>Home</NavLink>
-                        <NavLink to="about" className='px-3'>About</NavLink>
-                        <NavLink to="services" className='px-3'>Services</NavLink>
-                        <NavLink to="contact" className='px-3'>Contact</NavLink>
-                        <NavLink to="gallary" className='px-3'>Gallary</NavLink>
+                    {renderedLinks}
                     </div>
                     
                     <div>
-                        <NavLink to="booking" className='px-3 py-2 border-[1px] border-white'>Book</NavLink>
+                        <NavLink to="booking" className='px-3 py-2 relative after:absolute after:top-0 after:right-0 after:border-[1px] after:border-l-0 after:border-white after:h-full after:w-[15px] before:absolute before:top-0 before:left-0 before:border-[1px] before:border-r-0 before:border-white before:h-full before:w-[15px]'>Book</NavLink>
                     </div>
                     
-                </div>
+                </motion.div>
                 { click && SmallScreen }
                 <button onClick={handleClick} className='font-bold text-xl md:hidden'>
                   { click ? <IoClose className='text-3xl' />  : <CgMenuRightAlt className='text-3xl' />}

@@ -11,6 +11,7 @@ import OurTeam from '../components/OurTeam';
 import Services from '../components/services';
 import Packages from '../components/packages';
 import { BsArrowRight } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 
 
 const Home = () => {
@@ -18,15 +19,23 @@ const Home = () => {
         <>
             <div className="w-full h-screen bg-homebg bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center text-white">
                 <hr className="w-[70%] h-1 border-0 bg-secondary" />
-                <div className="flex flex-col items-center justify-center py-10">
+                <motion.div
+                initial={{ opacity:0, x: 50 }}
+                animate={{ opacity:1, x:0 }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col items-center justify-center py-10">
                     <h1 className="text-4xl md:text-8xl font-bold">INSTANT</h1>
                     <h2 className="text-xl md:text-3xl md:font-bold">Photo Studio</h2>
-                </div>
+                </motion.div>
                 <hr className="w-[70%] h-1 border-0 bg-secondary" />
-                <div className="px-3 flex flex-col items-center justify-center md:w-[50%]">
-                    <p className="text-sm md:text-xl text-center">
+                <div className="px-3 py-2 flex flex-col items-center justify-center md:w-[50%]">
+                <motion.p
+                initial={{y: 30}}
+                animate={{y: 0}}
+                transition={{ duration: 0.6 }}
+                className="text-sm md:text-xl text-center">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita minima omnis tenetur ea repellat minus. Iste voluptas esse magni voluptates odio. Nihil dolores aperiam vitae obcaecati ipsa. Quod, quia dolorum!
-                </p>
+                </motion.p>
                 </div>
             </div>
             <div className="w-full min-h-[50vh] md:min-h-[70vh] lg:h-screen flex flex-col items-center justify-center bg-primary text-white relative">
