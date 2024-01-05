@@ -53,7 +53,8 @@ const NavBar = () => {
 
         // Render Desktop NavLink components for the filtered links
         const renderedLinks = filteredLinks.map(link => (
-          <NavLink key={link.id} to={link.value} className='px-3'>
+          <NavLink key={link.id} to={link.value} className='relative px-3 hover:before:h-[5px] hover:before:w-[5px] hover:before:absolute hover:before:bottom-0 hover:before:right-0 hover:before:border-white hover:before:border-b-[1px] hover:before:border-r-[1px]
+          hover:after:h-[5px] hover:after:w-[5px] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:border-white hover:after:border-b-[1px] hover:after:border-l-[1px] transition-all ease-in-out'>
             {link.name}
           </NavLink>
         ));

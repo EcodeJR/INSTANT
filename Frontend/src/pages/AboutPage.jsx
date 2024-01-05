@@ -1,6 +1,5 @@
 import About from "../components/About";
 import OurTeam from "../components/OurTeam";
-import Footer from "../components/footer";
 import { motion } from 'framer-motion';
 
 const AboutPage = () => {
@@ -20,7 +19,6 @@ const AboutPage = () => {
             <About />
             <OurTeam />
         </div>
-        <Footer />
     </> );
 }
  

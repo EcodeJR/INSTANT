@@ -1,7 +1,6 @@
 import { AiOutlinePhone } from 'react-icons/ai';
 import { HiOutlineMail } from 'react-icons/hi';
 import { AiOutlineHome } from 'react-icons/ai';
-import Footer from '../components/footer';
 import { motion } from 'framer-motion';
 
 const ContactPage = () => {
@@ -43,7 +42,6 @@ const ContactPage = () => {
                 </div>
             </div>
         </div>
-        <Footer />
 
     </> );
 }

@@ -6,12 +6,12 @@ import About from '../components/About';
 import FAQ from '../components/FAQ';
 import OfficeSpace from '../components/OfficeSpace';
 import Partners from '../components/Partners';
-import Footer from '../components/footer';
 import OurTeam from '../components/OurTeam';
 import Services from '../components/services';
 import Packages from '../components/packages';
 import { BsArrowRight } from 'react-icons/bs';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -49,9 +49,9 @@ const Home = () => {
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita minima omnis tenetur ea repellat minus. Iste voluptas esse magni voluptates odio. Nihil dolores aperiam vitae obcaecati ipsa. Quod, quia dolorum!
                 </p>
                 </div>
-                <button className="bg-transparent border-2 border-white my-5 py-4 px-6 text-white text-xs">
-                    READ MORE
-                </button>
+                <Link to='booking' className="bg-transparent border-2 border-white my-5 py-4 px-6 text-white text-xl">
+                    Book NOW
+                </Link>
             </div>
             <div className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 gap-0 text-white text-center">
                     
@@ -173,8 +173,6 @@ const Home = () => {
                 </form>
                 
             </div>
-
-            <Footer />
         </>
      );
 }

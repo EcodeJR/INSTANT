@@ -16,6 +16,8 @@ import {
 import RootLayout from './pages/RootLayout';
 import NotFound from './pages/NotFound';
 import GallaryPage from './pages/GallaryPage';
+import Policies from './pages/policies';
+import Terms from './pages/Terms&Conditions';
 {
 
   /** import reactLogo from './assets/react.svg'
@@ -32,20 +34,17 @@ const router = createBrowserRouter(
           <Route path='services' element={<ServicesPage />} />
           <Route path='gallary' element={<GallaryPage />} />
           <Route path='booking' element={<BookingPage />} />
+          <Route path='policies' element={<Policies />} />
+          <Route path='terms' element={<Terms />} />
           <Route path='*' element={<NotFound />} />
         </Route>
   )
 )
 
 function App() {
-  {/*const [count, setCount] = useState(0)*/}
-
-
   return (
     <>
-    
         <RouterProvider router={router} />
-      
     </>
   )
 }

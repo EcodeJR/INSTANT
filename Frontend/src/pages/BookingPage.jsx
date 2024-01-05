@@ -1,4 +1,3 @@
-import Footer from '../components/footer';
 
 const BookingPage = () => {
     return ( <>
@@ -33,7 +32,7 @@ const BookingPage = () => {
 
         </div>
     </div>
-    <Footer />
+
     </> );
 }
  

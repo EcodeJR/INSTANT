@@ -1,4 +1,3 @@
-import Footer from "../components/footer";
 import Packages from "../components/packages";
 import Services from "../components/services";
 import { motion } from 'framer-motion';
@@ -20,7 +19,6 @@ const ServicesPage = () => {
         <Services />
         <Packages />
     </div>
-    <Footer />
     </> );
 }
  
