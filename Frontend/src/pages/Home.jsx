@@ -13,7 +13,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Newslatter from '../components/Newslatter';
 
-
 const Home = () => {
     return ( 
         <>

@@ -1,6 +1,28 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { BsArrowRight } from 'react-icons/bs';
+//import Popup from './Popup';
+
+// function Notice(){
+//   const [showPopup, setShowPopup] = useState(false);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setShowPopup(!showPopup);
+//     }, 5000); // Popup will disappear after 5 seconds (5000 milliseconds)
+
+//     return () => {
+//       clearTimeout(timer);
+//       setShowPopup(!showPopup);
+//     };
+//   }, []);
+
+//   if (showPopup) {
+//     return(
+//       <Popup message='Newslatter' />
+//     )
+//   }
+// }
 
 function Newslatter() {
   const [email, setEmail] = useState('');
