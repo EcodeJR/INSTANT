@@ -9,9 +9,9 @@ import Partners from '../components/Partners';
 import OurTeam from '../components/OurTeam';
 import Services from '../components/services';
 import Packages from '../components/packages';
-import { BsArrowRight } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Newslatter from '../components/Newslatter';
 
 
 const Home = () => {
@@ -162,17 +162,7 @@ const Home = () => {
                 <Partners />
             </div>
                       
-            <div className="w-full min-h-fit py-20 px-10 overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-center text-white bg-primary">
-                <div>
-                    <h3 className='text-base md:text-base font-semibold'>SUBSCRIBE TO OUR</h3>
-                    <h1 className='text-3xl md:text-5xl font-bold'>NEWSLATTER</h1>
-                </div>
-                <form action="" className='mx-0 md:mx-5 flex items-center justify-between bg-white rounded-xl w-full md:w-fit h-[10vh] text-primary'>
-                    <input type="email" name="newslatter" id="Newslatter" placeholder='Enter Your Email' className='p-3 bg-transparent outline-none w-full' />
-                    <button className='h-[90%] w-fit px-5 m-1 text-white bg-primary rounded-lg cursor-pointer'><BsArrowRight className='font-bold text-xl' /></button>
-                </form>
-                
-            </div>
+            <Newslatter />
         </>
      );
 }

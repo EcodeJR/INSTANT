@@ -2,8 +2,32 @@ import { AiOutlinePhone } from 'react-icons/ai';
 import { HiOutlineMail } from 'react-icons/hi';
 import { AiOutlineHome } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import axios from 'axios';
 
-const ContactPage = () => {
+function ContactPage() {
+
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    try {
+      await axios.post('http://localhost:5000/api/contact_us', { name, phone, email, message });
+      alert('Message sent!');
+      setName('');
+      setPhone('');
+      setEmail('');
+      setMessage('');
+    } catch (error) {
+      console.error('Error subscribing:', error.message);
+      alert('Subscription failed. Please try again.');
+    }
+    };
+
+
     return ( <>
     <div className="w-full h-screen flex flex-col items-center justify-center bg-contactbg bg-center bg-no-repeat bg-cover">
     <hr className="w-[70%] h-1 border-0 bg-secondary" />
@@ -22,11 +46,19 @@ const ContactPage = () => {
             <div className="flex flex-col items-center justify-center px-20 py-10 w-full">
                 <h1 className="font-bold text-3xl md:text-4xl lg:text-4xl mb-5">Contact Info</h1>
                 <p className='text-lg'>Feel free to contact us about your complaints or questions. <br />We are available 24/7.</p>
-                <form action="" className="w-full h-fit flex flex-col items-center justify-center p-4 text-primary">
-                    <input type="text" name="name" id="name" placeholder="Name" className="w-full border-b-2 border-primary/60 p-3 outline-none"/>
-                    <input type="email" name="email" id="email" placeholder="Email" className="w-full border-b-2 border-primary/60 p-3 outline-none"/>
-                    <input type="phone" name="phone" id="phone" placeholder="Phone" className="w-full border-b-2 border-primary/60 p-3 outline-none"/>
-                    <textarea name="message" id="message" placeholder="Message" className="w-full border-b-2 border-primary/60 p-3 outline-none"></textarea>
+                <form onSubmit={handleSubmit} className="w-full h-fit flex flex-col items-center justify-center p-4 text-primary">
+                    <input type="text" name="name" id="name" placeholder="Name" className="w-full border-b-2 border-primary/60 p-3 outline-none" value={name}
+        onChange={e => setName(e.target.value)}
+        required/>
+                    <input type="email" name="email" id="email" placeholder="Email" className="w-full border-b-2 border-primary/60 p-3 outline-none" value={email}
+        onChange={e => setEmail(e.target.value)}
+        required/>
+                    <input type="phone" name="phone" id="phone" placeholder="Phone" className="w-full border-b-2 border-primary/60 p-3 outline-none" value={phone}
+        onChange={e => setPhone(e.target.value)}
+        required/>
+                    <textarea name="message" id="message" placeholder="Message" className="w-full border-b-2 border-primary/60 p-3 outline-none" value={message}
+        onChange={e => setMessage(e.target.value)}
+        required></textarea>
                     <button type="submit" className="w-full bg-primary hover:bg-primary/90 duration-75 ease-in-out transition-all my-5 py-3 px-6 text-white text-xs">
                         SEND
                     </button>
