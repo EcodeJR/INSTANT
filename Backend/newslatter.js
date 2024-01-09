@@ -5,6 +5,6 @@ const NewsEmails = new Schema({
     email: { type: String, required: true }
 }, { timestamps: true });
 
-const Newslatter = mongoose.model('Blog', NewsEmails);
+const Newslatter = mongoose.model('Newslatter', NewsEmails);
 
 module.exports = Newslatter;
