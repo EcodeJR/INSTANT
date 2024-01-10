@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
+import Popup from '../components/Popup';
 function BookingPage() {
+    const [showPopup, setShowPopup] = useState(false);
 
 
     const [name, setName] = useState('');
@@ -13,23 +15,32 @@ function BookingPage() {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/booking', { name, phone, email, location, date });
-      alert('Session set!');
+      setShowPopup(true);
       setName('');
       setPhone('');
       setEmail('');
       setLocation('');
       setDate('');
     } catch (error) {
-      console.error('Error subscribing:', error.message);
-      alert('Subscription failed. Please try again.');
+      console.log('Error subscribing:', error.message);
+      alert('Failed to add Session. Please try again.');
     }
     };
+
+    const closePopup = () => {
+        setShowPopup(false);
+      };
 
 
 
 
 
     return ( <>
+    <Popup
+        show={showPopup}
+        message="Session successfully submitted!"
+        onClose={closePopup}
+      />
     <div className="w-screen min-h-screen bg-primary flex flex-col lg:flex-row items-center justify-between">
         <div className="w-full lg:w-[50vw] h-full flex flex-col items-center justify-center pt-[10vh]">
             <h1 className="font-bold text-white text-2xl uppercase">Booking</h1>

@@ -27,7 +27,7 @@ const About = () => {
                   return updatedCounters;
                 });
               }
-            }, 20);
+            }, 10);
           }
         });
       },

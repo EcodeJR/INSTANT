@@ -1,47 +1,38 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { BsArrowRight } from 'react-icons/bs';
-//import Popup from './Popup';
+import Popup from './Popup';
 
-// function Notice(){
-//   const [showPopup, setShowPopup] = useState(false);
 
-//   useEffect(() => {
-//     const timer = setTimeout(() => {
-//       setShowPopup(!showPopup);
-//     }, 5000); // Popup will disappear after 5 seconds (5000 milliseconds)
-
-//     return () => {
-//       clearTimeout(timer);
-//       setShowPopup(!showPopup);
-//     };
-//   }, []);
-
-//   if (showPopup) {
-//     return(
-//       <Popup message='Newslatter' />
-//     )
-//   }
-// }
 
 function Newslatter() {
   const [email, setEmail] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = async e => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/subscribe', { email });
-      alert('Successfully subscribed to newsletter!');
+      setShowPopup(true);
       setEmail('');
     } catch (error) {
-      console.error('Error subscribing:', error.message);
+      console.log('Error subscribing:', error.message);
       alert('Subscription failed. Please try again.');
     }
     };
 
+    const closePopup = () => {
+      setShowPopup(false);
+    };
 
 
     return (
+      <>
+      <Popup
+        show={showPopup}
+        message="Email successfully submitted!"
+        onClose={closePopup}
+      />
     <div className="w-full min-h-fit py-20 px-10 overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-center text-white bg-primary">
                 <div>
                     <h3 className='text-base md:text-base font-semibold'>SUBSCRIBE TO OUR</h3>
@@ -51,10 +42,11 @@ function Newslatter() {
                     <input type="email" name="newslatter" id="Newslatter" placeholder='Enter Your Email' className='p-3 bg-transparent outline-none w-full' value={email}
         onChange={e => setEmail(e.target.value)}
         required />
-                    <button type='submit' className='h-[90%] w-fit px-5 m-1 text-white bg-primary rounded-lg cursor-pointer'><BsArrowRight className='font-bold text-xl' /></button>
+                    <button type="submit" className='h-[90%] w-fit px-5 m-1 text-white bg-primary rounded-lg cursor-pointer'><BsArrowRight className='font-bold text-xl' /></button>
                 </form>
                 
             </div>
+            </>
             );
 }
  

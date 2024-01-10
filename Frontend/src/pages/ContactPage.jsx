@@ -4,8 +4,10 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import axios from 'axios';
+import Popup from '../components/Popup';
 
 function ContactPage() {
+    const [showPopup, setShowPopup] = useState(false);
 
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
@@ -16,19 +18,28 @@ function ContactPage() {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/contact_us', { name, phone, email, message });
-      alert('Message sent!');
+      setShowPopup(true);
       setName('');
       setPhone('');
       setEmail('');
       setMessage('');
     } catch (error) {
-      console.error('Error subscribing:', error.message);
+      console.log('Error subscribing:', error.message);
       alert('Subscription failed. Please try again.');
     }
     };
 
+    const closePopup = () => {
+        setShowPopup(false);
+      };
+
 
     return ( <>
+    <Popup
+        show={showPopup}
+        message="Message successfully submitted!"
+        onClose={closePopup}
+      />
     <div className="w-full h-screen flex flex-col items-center justify-center bg-contactbg bg-center bg-no-repeat bg-cover">
     <hr className="w-[70%] h-1 border-0 bg-secondary" />
                 <motion.div
