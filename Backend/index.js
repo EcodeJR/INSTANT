@@ -163,3 +163,10 @@ app.post('/api/booking', async (req, res) => {
       console.log(error)
     }
   });
+
+
+
+
+
+//UNSPLASH API
+const unsplash_url = 'https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY';
