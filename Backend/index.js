@@ -2,7 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import bodyParser from 'body-parser'
+import bodyParser from 'body-parser';
+import axios from 'axios';
 
 const router = express.Router();
 
@@ -169,4 +170,32 @@ app.post('/api/booking', async (req, res) => {
 
 
 //UNSPLASH API
-const unsplash_url = 'https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY';
+// const unsplash_url = 'https://api.unsplash.com/photos/?client_id='+process.env.UnSplashKEY;
+// console.log(unsplash_url);
+
+// Fetch images from Unsplash
+app.get('/api/images', async (req, res) => {
+  try {
+    const response = await axios.get('https://api.unsplash.com/photos/random', {
+      params: {
+        client_id: process.env.URLKEY,
+        query: 'human',
+        count: 30, // Adjust the count based on your needs
+      },
+    });
+
+    const images = response.data.map((photo) => ({
+      id: photo.id,
+      url: photo.urls.regular,
+      alt: photo.alt_description,
+    }));
+
+    res.json(images);
+  } catch (error) {
+    console.log('Error fetching images from Unsplash:', error);
+
+    if (!res.headersSent) {
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  }
+});
