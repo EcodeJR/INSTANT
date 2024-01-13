@@ -32,22 +32,26 @@ const GallaryPage = () => {
 
     return ( 
         <>
-            <div className="w-full h-screen flex flex-col items-center justify-center bg-gallarybg bg-center bg-no-repeat bg-cover">
-                <hr className="w-[70%] h-1 border-0 bg-secondary" />
+            <div className="w-full h-fit flex flex-col items-center justify-center p-10 bg-primary">
                 <motion.div
                 initial={{ opacity:0, x: 50 }}
                 animate={{ opacity:1, x:0 }}
                 transition={{ duration: 0.6 }}
                 className="flex flex-col items-center justify-center py-10">
-                    <h1 className="text-4xl md:text-8xl font-bold text-white">GALLARY</h1>
+                  <div className='flex items-center justify-center w-full'>
+                    <hr className="w-[10%] h-1 border-0 bg-secondary" />
+                    <h1 className="text-4xl md:text-4xl font-bold text-white mx-5 text-center"> INSTANT GALLARY</h1>
+                    <hr className="w-[10%] h-1 border-0 bg-secondary" />
+                  </div>
+                    
+                    <blockquote className='text-xl text-white/70 text-center italic'>Capturing moments is like taking a fine wine – the best shots develop with time,<br /> and a good flash can make even the dullest subjects sparkle.</blockquote>
                 </motion.div>
-                <hr className="w-[70%] h-1 border-0 bg-secondary" />
         </div>
         <div className='relative columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8 p-5 w-full'>
-        {loading && <p className='text-xl font-semibold text-center'>Loading...</p>}
+        {loading && <div className='w-full flex items-center justify-center'> <p className='text-xl font-semibold'>Loading...</p> </div>}
         {!loading &&
           images.map(image => (
-            <img key={image.id} src={image.url} alt={image.alt} onClick={() => openImageModal(image)} />
+            <img key={image.id} src={image.url} alt={image.alt} loading='lazy' onClick={() => openImageModal(image)} />
           ))
         }
         {/* Modal for displaying the larger image */}

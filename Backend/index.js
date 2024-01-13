@@ -179,8 +179,8 @@ app.get('/api/images', async (req, res) => {
     const response = await axios.get('https://api.unsplash.com/photos/random', {
       params: {
         client_id: process.env.URLKEY,
-        query: 'human',
-        count: 30, // Adjust the count based on your needs
+        query: 'human', //Search category of the images
+        count: 30, // Number of images to be displayed
       },
     });
 

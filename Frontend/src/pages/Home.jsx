@@ -1,6 +1,6 @@
-import camera from '../assets/camera.png';
-import hello from '../assets/security-camera.png';
-import mic from '../assets/mic.png';
+// import camera from '../assets/camera.png';
+// import hello from '../assets/security-camera.png';
+// import mic from '../assets/mic.png';
 import questions from '../assets/questions.jpg';
 import About from '../components/About';
 import FAQ from '../components/FAQ';
@@ -12,6 +12,11 @@ import Packages from '../components/packages';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Newslatter from '../components/Newslatter';
+import welcome1 from '../assets/welcome1.jpg';
+import welcome2 from '../assets/welcome2.jpg';
+import welcome3 from '../assets/welcome3.jpg';
+import welcome4 from '../assets/welcome4.jpg';
+import welcome5 from '../assets/welcome5.jpg';
 
 const Home = () => {
     return ( 
@@ -37,20 +42,35 @@ const Home = () => {
                 </motion.p>
                 </div>
             </div>
-            <div className="w-full min-h-[50vh] md:min-h-[70vh] lg:h-screen flex flex-col items-center justify-center bg-primary text-white relative">
-                <img src={camera} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute top-1 right-5 opacity-50 animate-shake' />
-                <img src={hello} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute top-1 left-3 opacity-50' />
-                <img src={mic} alt="3d image of a camera" className='w-[50px] md:w-[70px] lg:w-[80px] h-auto absolute bottom-1 right-3 opacity-50' />
-                <hr className="w-[30%] h-1 border-0 bg-secondary" />
+            <div className="w-full min-h-[50vh] md:min-h-[70vh] lg:h-screen bg-primary text-white relative overflow-hidden">
+                <div className='w-full h-full absolute top-0 left-0 flex flex-col items-center justify-center z-30'>
+                    <hr className="w-[30%] h-1 border-0 bg-secondary" />
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold my-10">WELCOME</h1>
-                <div className="px-3 flex flex-col items-center justify-center md:w-[50%]">
-                    <p className="text-sm md:text-xl text-center">
+                <div className="px-3 flex flex-col items-center justify-center w-[70%] md:w-[50%]">
+                    <p className="text-sm md:text-xl text-justify">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita minima omnis tenetur ea repellat minus. Iste voluptas esse magni voluptates odio. Nihil dolores aperiam vitae obcaecati ipsa. Quod, quia dolorum!
                 </p>
                 </div>
                 <Link to='booking' className="bg-transparent border-2 border-white my-5 py-4 px-6 text-white text-xl">
-                    Book NOW
+                    BOOK NOW
                 </Link>
+                </div>
+                <div className='absolute left-0 top-0 w-[30vw] h-full z-20 overflow-hidden opacity-50 animate-glide'>
+                    <img src={welcome1} alt="image of a person" className='absolute top-[0%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                    <img src={welcome2} alt="image of a person" className='absolute top-[20%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                    <img src={welcome3} alt="image of a person" className='absolute top-[40%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                    <img src={welcome4} alt="image of a person" className='absolute top-[60%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                    <img src={welcome5} alt="image of a person" className='absolute top-[80%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                </div>
+
+                <div className='absolute right-0 top-0 w-[30vw] h-full z-20 overflow-hidden opacity-50 animate-reglide'>
+                    <img src={welcome1} alt="image of a person" className='absolute top-[0%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                    <img src={welcome2} alt="image of a person" className='absolute top-[20%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                    <img src={welcome3} alt="image of a person" className='absolute top-[40%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                    <img src={welcome4} alt="image of a person" className='absolute top-[60%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                    <img src={welcome5} alt="image of a person" className='absolute top-[80%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
+                </div>
+                
             </div>
             <div className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 gap-0 text-white text-center">
                     

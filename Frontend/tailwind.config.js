@@ -9,6 +9,8 @@ export default {
       animation: {
         marquee: "marquee 10s linear infinite",
         shake: "shake 2s linear infinite",
+        glide: "glide 3s ease-in-out infinite",
+        reglide: "reglide 3s ease-in-out infinite",
       },
       keyframes: {
         marquee: {
@@ -29,6 +31,16 @@ export default {
           '100%': {
             transform: 'rotate(10deg)',
           }
+        },
+        glide: {
+          "0%": {transform: 'translateY(-5%)'},
+          "50%": {transform: 'translateY(5%)'},
+          "100%": {transform: 'translateY(-5%)'},
+        },
+        reglide: {
+          "0%": {transform: 'translateY(5%)'},
+          "50%": {transform: 'translateY(-5%)'},
+          "100%": {transform: 'translateY(5%)'},
         }
       },
       colors: {
