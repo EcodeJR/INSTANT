@@ -1,38 +1,49 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { BsArrowRight } from 'react-icons/bs';
-import Popup from './Popup';
+// import Popup from './Popup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 function Newslatter() {
   const [email, setEmail] = useState('');
-  const [showPopup, setShowPopup] = useState(false);
+  // const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = async e => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/subscribe', { email });
-      setShowPopup(true);
+      toast.success("Email successfully submitted!");
+      // setShowPopup(true);
       setEmail('');
     } catch (error) {
+      console.log("You shouldn't be here buddy! But since you are message me on twitter @EcodeJR let's connect. :)");
       console.log('Error subscribing:', error.message);
-      alert('Subscription failed. Please try again.');
+      if (error.response.status == 400) {
+        toast.error("Email already exist")
+      }else{
+        toast.error("Network Error, Please try again.");
+      }
+      
+      // alert('Subscription failed. Please try again.');
     }
     };
 
-    const closePopup = () => {
-      setShowPopup(false);
-    };
+    // const closePopup = () => {
+    //   setShowPopup(false);
+    // };
 
 
     return (
       <>
-      <Popup
+      <ToastContainer />
+      {/* <Popup
         show={showPopup}
         message="Email successfully submitted!"
         onClose={closePopup}
-      />
+      /> */}
     <div className="w-full min-h-fit py-20 px-10 overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-center text-white bg-primary">
                 <div>
                     <h3 className='text-base md:text-base font-semibold'>SUBSCRIBE TO OUR</h3>

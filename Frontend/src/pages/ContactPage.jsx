@@ -4,10 +4,12 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import axios from 'axios';
-import Popup from '../components/Popup';
+// import Popup from '../components/Popup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ContactPage() {
-    const [showPopup, setShowPopup] = useState(false);
+    // const [showPopup, setShowPopup] = useState(false);
 
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
@@ -18,28 +20,29 @@ function ContactPage() {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/contact_us', { name, phone, email, message });
-      setShowPopup(true);
+      toast.success("Message successfully submitted!");
       setName('');
       setPhone('');
       setEmail('');
       setMessage('');
     } catch (error) {
       console.log('Error subscribing:', error.message);
-      alert('Subscription failed. Please try again.');
+      toast.error("Oops! An error occured try again..")
     }
     };
 
-    const closePopup = () => {
-        setShowPopup(false);
-      };
+    // const closePopup = () => {
+    //     setShowPopup(false);
+    //   };
 
 
     return ( <>
-    <Popup
+    {/* <Popup
         show={showPopup}
         message="Message successfully submitted!"
         onClose={closePopup}
-      />
+      /> */}
+      <ToastContainer />
     <div className="w-full h-screen flex flex-col items-center justify-center bg-contactbg bg-center bg-no-repeat bg-cover">
     <hr className="w-[70%] h-1 border-0 bg-secondary" />
                 <motion.div

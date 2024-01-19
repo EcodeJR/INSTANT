@@ -51,7 +51,7 @@ const GallaryPage = () => {
         {loading && <div className='w-full flex items-center justify-center'> <p className='text-xl font-semibold'>Loading...</p> </div>}
         {!loading &&
           images.map(image => (
-            <img key={image.id} src={image.url} alt={image.alt} loading='lazy' onClick={() => openImageModal(image)} />
+            <img key={image.id} src={image.url} alt={image.alt} loading='eager' onClick={() => openImageModal(image)} />
           ))
         }
         {/* Modal for displaying the larger image */}

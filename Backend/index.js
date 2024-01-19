@@ -11,7 +11,7 @@ dotenv.config();
 const mongodbURL = process.env.DBURL;
 
 const app = express();
-// app.use(cors());
+
 app.use(cors({
     origin: '*', // Replace with your frontend domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -50,12 +50,10 @@ const ContactUs = new Schema({
         required: true
      },
      phone: { type: Number, 
-        required: true,
-        unique: true
+        required: true
      },
     email: { type: String, 
         required: true,
-        unique: true,
         lowercase: true
      },
      message: { type: String, 
@@ -71,12 +69,10 @@ const Booking = new Schema({
         required: true
      },
      phone: { type: Number, 
-        required: true,
-        unique: true
+        required: true
      },
     email: { type: String, 
         required: true,
-        unique: true,
         lowercase: true
      },
      location: { type: String, 

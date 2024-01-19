@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import axios from 'axios';
-import Popup from '../components/Popup';
+// import Popup from '../components/Popup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function BookingPage() {
-    const [showPopup, setShowPopup] = useState(false);
+    // const [showPopup, setShowPopup] = useState(false);
 
 
     const [name, setName] = useState('');
@@ -15,7 +17,7 @@ function BookingPage() {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/booking', { name, phone, email, location, date });
-      setShowPopup(true);
+      toast.success("Session successfully submitted!");
       setName('');
       setPhone('');
       setEmail('');
@@ -23,24 +25,25 @@ function BookingPage() {
       setDate('');
     } catch (error) {
       console.log('Error subscribing:', error.message);
-      alert('Failed to add Session. Please try again.');
+      toast.error("Oops! An error occured try again..")
     }
     };
 
-    const closePopup = () => {
-        setShowPopup(false);
-      };
+    // const closePopup = () => {
+    //     setShowPopup(false);
+    //   };
 
 
 
 
 
     return ( <>
-    <Popup
+    {/* <Popup
         show={showPopup}
         message="Session successfully submitted!"
         onClose={closePopup}
-      />
+      /> */}
+      <ToastContainer />
     <div className="w-screen min-h-screen bg-primary flex flex-col lg:flex-row items-center justify-between">
         <div className="w-full lg:w-[50vw] h-full flex flex-col items-center justify-center pt-[10vh]">
             <h1 className="font-bold text-white text-2xl uppercase">Booking</h1>
