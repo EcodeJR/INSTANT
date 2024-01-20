@@ -29,6 +29,13 @@ const GallaryPage = () => {
     setSelectedImage(null);
   };
 
+  const Loader = <>
+  <div className='w-full h-[30vh] flex items-center justify-center flex-col'> 
+  <div className='h-6 w-6 bg-primary/60 rounded-full animate-bounce duration-100'></div> 
+  <p className='text-xl font-bold'>Loading....</p>
+   </div>
+  </>;
+
 
     return ( 
         <>
@@ -47,8 +54,9 @@ const GallaryPage = () => {
                     <blockquote className='text-xl text-white/70 text-center italic'>Capturing moments is like taking a fine wine – the best shots develop with time,<br /> and a good flash can make even the dullest subjects sparkle.</blockquote>
                 </motion.div>
         </div>
+        {loading && Loader}
         <div className='relative columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8 p-5 w-full'>
-        {loading && <div className='w-full flex items-center justify-center'> <p className='text-xl font-semibold'>Loading...</p> </div>}
+        
         {!loading &&
           images.map(image => (
             <img key={image.id} src={image.url} alt={image.alt} loading='eager' onClick={() => openImageModal(image)} />
