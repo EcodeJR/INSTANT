@@ -176,7 +176,7 @@ app.get('/api/images', async (req, res) => {
       params: {
         client_id: process.env.URLKEY,
         query: 'human', //Search category of the images
-        count: 30, // Number of images to be displayed
+        count: 20, // Number of images to be displayed
       },
     });
 
