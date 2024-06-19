@@ -16,6 +16,7 @@ app.use(cors({
     origin: 'https://instant-cyan.vercel.app', // Replace with your frontend domain --
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable credentials (if your frontend sends cookies, sessions, or authentication tokens)
+    optionsSuccessStatus: 200
   }));
   
 
