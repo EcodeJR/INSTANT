@@ -35,7 +35,7 @@ const NavBar = () => {
             animate={click ? "open" : "closed"}
             variants={variants}
             transition={{when: 'beforeChildren'}}
-            className='absolute z-20 top-[100%] right-0 flex flex-col items-start justify-around w-[70vw] min-h-[70vh] border-b-8 border-b-secondary shadow-lg bg-primary/90 font-bold py-20 px-5'>
+            className='absolute z-50 top-[100%] right-0 flex flex-col items-start justify-around w-[70vw] min-h-[70vh] border-b-8 border-b-secondary shadow-lg bg-primary/90 font-bold py-20 px-5'>
                 {Links.map(link => (
                     <motion.span
                     initial={{ opacity:0, x:'-100px'}}

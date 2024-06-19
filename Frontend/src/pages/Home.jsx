@@ -12,16 +12,29 @@ import Packages from '../components/packages';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Newslatter from '../components/Newslatter';
-import welcome1 from '../assets/welcome1.jpg';
-import welcome2 from '../assets/welcome2.jpg';
-import welcome3 from '../assets/welcome3.jpg';
-import welcome4 from '../assets/welcome4.jpg';
-import welcome5 from '../assets/welcome5.jpg';
+import { useState } from 'react';
+// import welcome1 from '../assets/welcome1.jpg';
+// import welcome2 from '../assets/welcome2.jpg';
+// import welcome3 from '../assets/welcome3.jpg';
+// import welcome4 from '../assets/welcome4.jpg';
+// import welcome5 from '../assets/welcome5.jpg';
+import { IoShareSocialOutline } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
+import { MdOutlineFacebook } from "react-icons/md";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaSquareWhatsapp } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Home = () => {
+    const [social, ToggleSocial ] = useState(false);
+
+    const handleSocials = () => {
+        ToggleSocial(!social);
+    } 
+    
     return ( 
         <>
-            <div className="w-full h-screen bg-homebg bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center text-white">
+            <div className="w-full h-screen bg-homebg bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center text-white relative">
                 <hr className="w-[70%] h-1 border-0 bg-secondary" />
                 <motion.div
                 initial={{ opacity:0, x: 50 }}
@@ -41,38 +54,55 @@ const Home = () => {
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita minima omnis tenetur ea repellat minus. Iste voluptas esse magni voluptates odio. Nihil dolores aperiam vitae obcaecati ipsa. Quod, quia dolorum!
                 </motion.p>
                 </div>
+
+
+
+                <div className='flex absolute bottom-10 left-5'>
+                    <div className='h-[50px] w-[50px] flex items-center justify-center border-2 border-white rounded-full cursor-pointer' onClick={handleSocials}>
+                        {social ? (
+                            <p><IoMdClose /></p>
+                        ) : (
+                            <p><IoShareSocialOutline /></p>
+                        )}
+                        
+                    </div>
+                    
+                        { social ? (
+                            <motion.div
+                            initial={{x: 30}}
+                            animate={{x: 0}}
+                            transition={{ duration: 0.6 }}
+                            className='flex items-center justify-center'>
+                                <p className='h-[40px] w-[40px] border-white border-2 rounded-full flex items-center justify-center mx-1 cursor-pointer'><MdOutlineFacebook /></p>
+                                <p className='h-[40px] w-[40px] border-white border-2 rounded-full flex items-center justify-center mx-1 cursor-pointer'><FaSquareInstagram /></p>
+                                <p className='h-[40px] w-[40px] border-white border-2 rounded-full flex items-center justify-center mx-1 cursor-pointer'><FaSquareWhatsapp /></p>
+                                <p className='h-[40px] w-[40px] border-white border-2 rounded-full flex items-center justify-center mx-1 cursor-pointer'><FaXTwitter /></p>
+                        </motion.div>
+                        ) : (
+                            null
+                        )}
+                        
+                    
+
+                </div>
             </div>
-            <div className="w-full min-h-[50vh] md:min-h-[70vh] lg:h-screen bg-primary text-white relative overflow-hidden">
-                <div className='w-full h-full absolute top-0 left-0 flex flex-col items-center justify-center z-30'>
+            <div className="w-full min-h-[40vh] md:min-h-[60vh] lg:min-h-[70vh] bg-primary text-white relative overflow-hidden py-4">
+                <div className='w-full h-full flex flex-col items-center justify-center z-30'>
+                    <h4 className='text-white text-3xl md:text-5xl'>*</h4>
                     <hr className="w-[30%] h-1 border-0 bg-secondary" />
-                <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold my-10">WELCOME</h1>
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold my-10">WELCOME</h1>
                 <div className="px-3 flex flex-col items-center justify-center w-[70%] md:w-[50%]">
                     <p className="text-sm md:text-xl text-justify">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita minima omnis tenetur ea repellat minus. Iste voluptas esse magni voluptates odio. Nihil dolores aperiam vitae obcaecati ipsa. Quod, quia dolorum!
-                </p>
+                    </p>
                 </div>
-                <Link to='booking' className="bg-transparent border-2 border-white my-5 py-4 px-6 text-white text-xl">
+                <Link to='booking' className="bg-transparent border-2 border-white my-5 py-2 md:py-4 px-4 md:px-6 text-white text-xl">
                     BOOK NOW
                 </Link>
                 </div>
-                <div className='absolute left-0 top-0 w-[30vw] h-full z-20 overflow-hidden opacity-50 animate-glide'>
-                    <img src={welcome1} alt="image of a person" className='absolute top-[0%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                    <img src={welcome2} alt="image of a person" className='absolute top-[20%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                    <img src={welcome3} alt="image of a person" className='absolute top-[40%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                    <img src={welcome4} alt="image of a person" className='absolute top-[60%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                    <img src={welcome5} alt="image of a person" className='absolute top-[80%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                </div>
-
-                <div className='absolute right-0 top-0 w-[30vw] h-full z-20 overflow-hidden opacity-50 animate-reglide'>
-                    <img src={welcome1} alt="image of a person" className='absolute top-[0%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                    <img src={welcome2} alt="image of a person" className='absolute top-[20%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                    <img src={welcome3} alt="image of a person" className='absolute top-[40%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                    <img src={welcome4} alt="image of a person" className='absolute top-[60%] left-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                    <img src={welcome5} alt="image of a person" className='absolute top-[80%] right-[5%] w-[15vw] lg:w-[10vw] grayscale' />
-                </div>
                 
             </div>
-            <div className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 gap-0 text-white text-center">
+            <div className="w-full min-h-[50vh] grid grid-cols-1 md:grid-cols-2 gap-0 text-white text-center">
                     
                     <div className="flex flex-col items-center justify-center py-10 bg-camp bg-center bg-no-repeat bg-cover">
                         <hr className="w-[20%] h-1 border-0 bg-secondary" />
@@ -172,7 +202,11 @@ const Home = () => {
                         <FAQ />
                     </div>
                 </div>
-                <img src={questions} alt="man standing with camera" className='w-[70%] md:w-[30vw] my-10 md:my-0 h-[40vh] md:h-[70%]' />
+                <div className='w-[60vw] md:w-[30vw] my-10 md:my-0 h-[40vh] md:h-[70vh] relative before:absolute before:-top-5 before:-left-5 before:border-t-2 before:border-l-2 before:border-white before:h-[50px] before:w-[50px] after:absolute after:-bottom-5 after:-right-5 after:border-b-2 after:border-r-2 after:border-white after:h-[50px] after:w-[50px]'>
+                    <h3 className='absolute top-2 left-2 text-white font-semibold text-2xl'>PEOPLE ALSO ASKED US...</h3>
+                    <img src={questions} alt="man standing with camera" className='w-full h-full object-cover' />
+                </div>
+                
             </div>
 
 

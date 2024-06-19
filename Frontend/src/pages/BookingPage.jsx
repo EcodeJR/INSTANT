@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { motion } from 'framer-motion'
 // import Popup from '../components/Popup';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -81,9 +82,13 @@ function BookingPage() {
 
             </form>
         </div>
-        <div className="w-full lg:w-[40vw] h-[40vh] lg:h-screen md:hidden lg:block bg-homebg bg-cover bg-no-repeat clipped-polygon block mt-2">
+        <motion.div
+        initial={{ x:'100px'}}
+        animate={{ x:0 }}
+        transition={{delay: 0.3}}
+        className="w-full lg:w-[40vw] h-[40vh] lg:h-[60vh] md:hidden lg:block bg-homebg bg-cover bg-no-repeat clipped-polygon block my-6 lg:my-0">
 
-        </div>
+        </motion.div>
     </div>
 
     </> );

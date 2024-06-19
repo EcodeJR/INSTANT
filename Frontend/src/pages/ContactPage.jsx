@@ -57,7 +57,7 @@ function ContactPage() {
         <div className="relative text-primary bg-white flex flex-col lg:flex-row items-center justify-center">
             <div className='h-[50px] w-[50px] bg-transparent border-2 border-primary absolute animate-shake top-5 left-5'></div>
             <div className="h-[100px] w-full lg:h-full lg:w-[200px] bg-secondary absolute lg:top-0 bottom-0 right-0"></div>
-            <div className="flex flex-col items-center justify-center px-20 py-10 w-full">
+            <div className="flex flex-col items-center justify-center px-5 lg:px-20 py-10 w-full">
                 <h1 className="font-bold text-3xl md:text-4xl lg:text-4xl mb-5">Contact Info</h1>
                 <p className='text-lg'>Feel free to contact us about your complaints or questions. <br />We are available 24/7.</p>
                 <form onSubmit={handleSubmit} className="w-full h-fit flex flex-col items-center justify-center p-4 text-primary">

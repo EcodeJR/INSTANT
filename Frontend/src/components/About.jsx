@@ -63,7 +63,7 @@ const About = () => {
                     <h1 className='font-bold text-3xl md:text-3xl lg:text-4xl'>ABOUT <br />
                      US</h1>
                 </motion.div>
-                <div className='w-fit md:w-[60%]'>
+                <div className='w-fit md:w-[60%] px-5 lg:px-0'>
                     <h1 className='font-bold text-2xl md:text-3xl lg:text-4xl text-secondary my-5'>INSTANT PHOTOGRAPHY</h1>
                     <p className='text-gray-300'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptatibus, error blanditiis ipsam quidem officia illum nemo perspiciatis quod explicabo aliquid itaque commodi at asperiores voluptatum enim ex laboriosam consequatur!</p>
                     <p className='text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, placeat labore. Consequuntur magnam vel aliquid quos quia pariatur delectus repellendus, doloremque quisquam? Eaque aliquid corporis accusantium magni repellat, omnis placeat.</p>

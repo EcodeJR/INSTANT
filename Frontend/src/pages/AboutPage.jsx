@@ -15,7 +15,7 @@ const AboutPage = () => {
             </motion.div>
             <hr className="w-[70%] h-1 border-0 bg-secondary" />
         </div>
-        <div className="bg-primary text-white px-10 py-5 h-fit">
+        <div className="bg-primary text-white px-0 md:px-10 py-5 h-fit">
             <About />
             <OurTeam />
         </div>

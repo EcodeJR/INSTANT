@@ -14,9 +14,9 @@ const Partners = () => {
         <>
             <div className="pointer-events-none relative flex gap-10 overflow-hidden">
                 <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-10">
-                <img className="aspect-square max-w-[clamp(10rem,28vmin,20rem)] rounded-md object-cover shadow-md" src={SonyLogo} alt="" />
+                <img className="aspect-square max-w-[clamp(10rem,28vmin,20rem)] rounded-md object-fit shadow-md" src={SonyLogo} alt="" />
                 <img className="aspect-square max-w-[clamp(10rem,28vmin,20rem)] rounded-md object-cover shadow-md" src={nikonLogo} alt="" />
-                <img className="aspect-square max-w-[clamp(10rem,28vmin,20rem)] rounded-md object-cover shadow-md" src={camonLogo} alt="" />
+                <img className="aspect-square max-w-[clamp(10rem,28vmin,20rem)] rounded-md object-fit shadow-md" src={camonLogo} alt="" />
                 <img className="aspect-square max-w-[clamp(10rem,28vmin,20rem)] rounded-md object-cover shadow-md" src={hasselbladLogo} alt="" />
                 <img className="aspect-square max-w-[clamp(10rem,28vmin,20rem)] rounded-md object-cover shadow-md" src={konicaLogo} alt="" />
                 </div>

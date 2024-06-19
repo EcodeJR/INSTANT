@@ -12,13 +12,13 @@ const Footer = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam quia, earum nobis, quo, sapiente ullam nulla at nisi ipsum deleniti nam a ea adipisci debitis quod rerum nostrum non sit!</p>
                 </div>
                 <div className="flex flex-col items-start justify-start w-full my-5 mx-4 lg:my-0">
-                    <h1 className="font-bold text-xl py-2">SOCIALS</h1>
+                    <h1 className="font-bold text-xl py-2 mb-2 border-b-[1px] border-white/50 lg:border-0 w-full">SOCIALS</h1>
                     <a href="tel:07051242451">+2347051242451</a>
                     <a href="mail:emmanueldcode@gmail.com">instantphotography@gmail.com</a>
                     <p>Plot B No. 12 Kingsmen Plaza, Amadu bello way Abuja, Nigeria.</p>
                 </div>
                 <div className="flex flex-col items-start justify-start w-full my-5 mx-4 lg:my-0">
-                    <h1 className="font-bold text-xl py-2">LINKS</h1>
+                    <h1 className="font-bold text-xl py-2 mb-2 border-b-[1px] border-white/50 lg:border-0 w-full">LINKS</h1>
                     <Link to='/'>Home</Link>
                     <Link to='about'>About us</Link>
                     <Link to='contact'>Contact us</Link>
@@ -26,12 +26,15 @@ const Footer = () => {
                     <Link to='gallary'>Gallary</Link>
                 </div>
                 <div className="flex flex-col items-start justify-start w-full mx-4">
-                    <h1 className="font-bold text-xl py-2">LEGAL</h1>
+                    <h1 className="font-bold text-xl py-2 mb-2 border-b-[1px] border-white/50 lg:border-0 w-full">LEGAL</h1>
                     <Link to="policies">Policies</Link>
                     <Link to="terms">Terms and Conditions</Link>
                     <Link to="terms">Others</Link>
                 </div>
             </div>
+            {/* <div className="w-screen h-fit py-3 bg-white text-primary text-center">
+                <p>copyright@instantphotography</p>
+            </div> */}
         </div>
         </>
 
