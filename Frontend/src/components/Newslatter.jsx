@@ -14,7 +14,7 @@ function Newslatter() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/subscribe', { email });
+      await axios.post('https://instant-api-eight.vercel.app/api/subscribe', { email });
       toast.success("Email successfully submitted!");
       // setShowPopup(true);
       setEmail('');

@@ -17,7 +17,7 @@ function BookingPage() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/booking', { name, phone, email, location, date });
+      await axios.post('https://instant-api-eight.vercel.app/api/booking', { name, phone, email, location, date });
       toast.success("Session successfully submitted!");
       setName('');
       setPhone('');

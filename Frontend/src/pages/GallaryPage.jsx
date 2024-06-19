@@ -10,7 +10,7 @@ const GallaryPage = () => {
 
   useEffect(() => {
     // Fetch images from your Node.js backend
-    axios.get('http://localhost:5000/api/images')
+    axios.get('https://instant-api-eight.vercel.app/api/images')
       .then(response => {
         setImages(response.data);
         setLoading(false);

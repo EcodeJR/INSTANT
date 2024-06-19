@@ -16,7 +16,7 @@ import {
 import RootLayout from './pages/RootLayout';
 import NotFound from './pages/NotFound';
 import GallaryPage from './pages/GallaryPage';
-import Policies from './pages/policies';
+import Policies from './pages/Policies';
 import Terms from './pages/Terms&Conditions';
 {
 

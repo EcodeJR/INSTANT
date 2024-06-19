@@ -19,7 +19,7 @@ function ContactPage() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/contact_us', { name, phone, email, message });
+      await axios.post('https://instant-api-eight.vercel.app/api/contact_us', { name, phone, email, message });
       toast.success("Message successfully submitted!");
       setName('');
       setPhone('');
