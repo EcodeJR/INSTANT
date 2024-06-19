@@ -13,13 +13,13 @@ const mongodbURL = process.env.DBURL;
 const app = express();
 
 app.use(cors({
-    origin: 'https://instant-cyan.vercel.app/', // Replace with your frontend domain
+    origin: 'https://instant-cyan.vercel.app', // Replace with your frontend domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable credentials (if your frontend sends cookies, sessions, or authentication tokens)
   }));
   
 
-var PORT = 5000;
+var PORT = 8080;
 
 mongoose.connect(mongodbURL)
     .then((result) => {
