@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Loading from '../components/Loading'
 import { useState } from 'react'
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 
 const RootLayout = () => {
     const [loading, setLoading] = useState(false);
