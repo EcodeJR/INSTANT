@@ -13,7 +13,7 @@ const mongodbURL = process.env.DBURL;
 const app = express();
 
 app.use(cors({
-    origin: '*', // Replace with your frontend domain --https://instant-cyan.vercel.app
+    origin: 'https://instant-cyan.vercel.app/', // Replace with your frontend domain --
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable credentials (if your frontend sends cookies, sessions, or authentication tokens)
     optionsSuccessStatus: 200
