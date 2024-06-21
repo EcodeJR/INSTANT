@@ -19,13 +19,15 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-    origin: function (origin, callback) {
+    origin: 
+    function (origin, callback) {
       if (!origin || allowedOrigins.indexOf(origin) !== -1) {
         callback(null, true);
       } else {
         callback(new Error('Not allowed by CORS'));
       }
-    }, // Replace with your frontend domain --
+    }
+    , // Replace with your frontend domain --
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable credentials (if your frontend sends cookies, sessions, or authentication tokens)
     optionsSuccessStatus: 200
@@ -34,7 +36,7 @@ app.use(cors({
 
 var PORT = 8080;
 
-mongoose.connect(mongodbURL)
+mongoose.connect('mongodb+srv://ecode:SimplyIntellecT1.@instant.nfjjwa7.mongodb.net/INSTANT?retryWrites=true&w=majority')
     .then((result) => {
         app.listen(PORT, () => {
             const db = result.db;
