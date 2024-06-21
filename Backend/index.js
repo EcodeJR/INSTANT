@@ -12,8 +12,20 @@ const mongodbURL = process.env.DBURL;
 
 const app = express();
 
+const allowedOrigins = [
+  'https://instant-cyan.vercel.app',
+  'https://instant-cyan.vercel.app/gallary',
+  'https://instant-cyan.vercel.app/booking'
+];
+
 app.use(cors({
-    origin: 'https://instant-cyan.vercel.app/', // Replace with your frontend domain --
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    }, // Replace with your frontend domain --
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable credentials (if your frontend sends cookies, sessions, or authentication tokens)
     optionsSuccessStatus: 200
